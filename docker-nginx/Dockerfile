@@ -21,6 +21,7 @@ RUN apt-get install -y libpcre3 \
 
 
 
+
 #download sources http://nginx.org/en/download.html
 #list of all modules from source http://nginx.org/en/docs/configure.html
 RUN wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz \
@@ -61,12 +62,19 @@ COPY ./assets/www/html/index.html /var/www/html/
 COPY ./assets/www/html/image01.jpg /var/www/html/
 COPY ./assets/conf.d/default.conf /etc/nginx/conf.d/
 
+
 #copy the entry point scrupt to the bin directory 
-COPY entrypoint.sh /bin/
+RUN cd ./
+COPY ./assets/docker-entrypoint.sh ./
+COPY ./assets/docker-entrypoint.d ./
+
+#set execute permission
+RUN chmod +x docker-entrypoint.sh
+
 
 COPY --from=builder / /
 
-ENTRYPOINT ["bin/entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
 EXPOSE 80 443
 

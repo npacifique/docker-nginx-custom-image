@@ -1,0 +1,4 @@
+server.crt
+server.key
+docker-nginx/self.crt
+docker-nginx/self.key

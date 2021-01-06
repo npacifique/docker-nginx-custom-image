@@ -9,7 +9,7 @@
 ### Installation Guide 
 1. install docker from the installation script [installation script](https://get.docker.com/) 
 2. clone this repo 
-3. ```cd docker-nginx ```
+3. ```cd docker-nginx-custom-image ```
 4. run this command ```docker build  -t image_name:tag .```
 5. command to create a container using the new image ```docker run --name container_name -d -p 80:80 image_name:tag```
 6. access nginx from the web browser by going to [localhost](http://localhost/)

@@ -16,7 +16,7 @@
 
 
 ### Push to docker hub 
-* run this command ```docker tag 0303124918e6 nginx docker_name/image_name:tag_name``` then push the tagged image from your local docker console to docker hub
+* run this command ```docker tag replace_this_with_image_ID nginx docker_name/image_name:tag_name``` then push the tagged image from your local docker console to docker hub
 
 # Other commands
 I am adding other commands for managing services and containers 

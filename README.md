@@ -55,8 +55,6 @@ docker service update --network-rm bridge network mysql
 docker service update --publish-add published=80,target=80 nginx_server
 docker service update --publish-rm published=8080,target=80 wordpress
 ```
-<<<<<<< HEAD
-
 
 # Plex docker 
 - docker build -t plex .

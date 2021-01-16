@@ -9,14 +9,14 @@
 ### Installation Guide 
 1. install docker from the installation script [installation script](https://get.docker.com/) 
 2. clone this repo 
-3. ```cd docker-nginx ```
+3. ```cd docker-nginx-custom-image ```
 4. run this command ```docker build  -t image_name:tag .```
 5. command to create a container using the new image ```docker run --name container_name -d -p 80:80 image_name:tag```
 6. access nginx from the web browser by going to [localhost](http://localhost/)
 
 
 ### Push to docker hub 
-* run this command ```docker tag 0303124918e6 nginx docker_name/image_name:tag_name``` then push the tagged image from your local docker console to docker hub
+* run this command ```docker tag replace_this_with_image_ID nginx docker_name/image_name:tag_name``` then push the tagged image from your local docker console to docker hub
 
 # Other commands
 I am adding other commands for managing services and containers 
@@ -55,8 +55,11 @@ docker service update --network-rm bridge network mysql
 docker service update --publish-add published=80,target=80 nginx_server
 docker service update --publish-rm published=8080,target=80 wordpress
 ```
+<<<<<<< HEAD
 
 
 # Plex docker 
 - docker build -t plex .
 - docker run -d plex  
+=======
+>>>>>>> f12428cd1952843a8b1a5b48bd4eb43af950fa02

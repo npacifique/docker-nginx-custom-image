@@ -61,5 +61,3 @@ docker service update --publish-rm published=8080,target=80 wordpress
 # Plex docker 
 - docker build -t plex .
 - docker run -d plex  
-=======
->>>>>>> f12428cd1952843a8b1a5b48bd4eb43af950fa02

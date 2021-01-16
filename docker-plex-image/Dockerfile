@@ -1,4 +1,4 @@
-#https://github.com/plexinc/pms-docker/blob/master/Dockerfile
+#source https://github.com/plexinc/pms-docker
 
 FROM ubuntu:20.04
 
@@ -68,8 +68,7 @@ ARG TAG=beta
 ARG URL=
 
 COPY root/ /
-
-
+#
 RUN \
     # Save version and install
     /installBinary.sh
